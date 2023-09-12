@@ -1,6 +1,6 @@
 const path = require("path");
 const mongoose = require('mongoose');
-const mongo = require('./mongodb');
+const mongo = require('./mongodb/mongodb');
 
 async function main(){
    // const mon = mongodb()
@@ -8,7 +8,7 @@ async function main(){
     require('dotenv').config({path: path.resolve(__dirname,'.env')})
 
     // Connect to database
-    const { create_connection } = require('./mongodb');
+    const { create_connection } = require('./mongodb/mongodb');
     await create_connection();   
     
     
