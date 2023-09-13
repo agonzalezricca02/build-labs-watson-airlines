@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "swagger-autogen": "^2.23.5"
+  },
+  "dependencies": {
+    "@ibm-cloud/secrets-manager": "^2.0.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "fs": "^0.0.1-security",
+    "mongodb": "^6.0.0",
+    "mongoose": "^7.5.1"
+  }
+}

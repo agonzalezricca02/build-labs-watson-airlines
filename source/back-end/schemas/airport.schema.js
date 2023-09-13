@@ -1,7 +1,7 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const blogSchema = new Schema({
+const airportsSchema = new Schema({
     IATA_CODE :String, // Location Identifier.
     AIRPORT :String, // Airport's Name.
     CITY :String, // Airport's City.

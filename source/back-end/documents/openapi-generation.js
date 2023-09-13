@@ -5,23 +5,73 @@ const swagger_autogen = require("swagger-autogen")({ openapi: "3.0.0" });
 
 // Data schemas
 const mongo_specs = {
-    Sample: {
+    Airline: {
         type: "object",
         properties: {
-            ATTRIBUTE_1: {
+            _id: {
                 type: "string",
             },
-            ATTRIBUTE_2: {
+            IATA_CODE: {
+                type: "string",
+            },
+            AIRLINE: {
+                type: "string",
+            }
+        },
+    },
+    Airport: {
+        type: "object",
+        properties: {
+            _id: {
+                type: "string",
+            },
+            IATA_CODE: {
                 type: "number",
             },
-            ATTRIBUTE_3: {
+            AIRPORT: {
                 type: "boolean",
             },
-            ATTRIBUTE_4: {
+            CITY: {
+                type: "date",
+            },
+            STATE: {
+                type: "boolean",
+            },
+            COUNTRY: {
                 type: "date",
             },
         },
-    }
+    },
+    Flight: {
+        type: "object",
+        properties: {
+            _id: {
+                type: "string",
+            },
+            AIRLINE: {
+                type: "string",
+            },
+            FLIGHT_NUMBER: {
+                type: "string",
+            },
+            ORIGIN_AIRPORT: {
+                type: "string",
+            },
+            DESTINATION_AIRPORT: {
+                type: "string",
+            },
+            CANCELLED: {
+                type: "boolean",
+            },
+            DEPARTURE_DATE: {
+                type: "date",
+            },
+            ARRIVAL_DATE: {
+                type: "date",
+            },
+        },
+    },
+
 };
 
 // API general specs
@@ -31,8 +81,8 @@ const general_specs = {
         description:
             "This is a Sample REST API for the Watson Airlines Customer Experience use case.",
         contact: {
-            name: "Josefina R. Casanova",
-            email: "josefinarcasanova@ibm.com",
+            name: "Antonio Gonzalez Ricca",
+            email: "agonzalezricca02@gmail.com",
         },
         version: "1.0.0",
     },
@@ -58,12 +108,12 @@ const general_specs = {
 // API Routes
 // NOTE: if using Express Router, pass only the root file where the route starts.
 const api_routes = [
-    "./app.js",
-    "../../server.js"
+    "../app.js",
+ //   "../../server.js"
 ];
 
 // Output file path
-const output_file_path = "./docs/openapi-spec.json";
+const output_file_path = "./openapi-spec.json";
 
 // Generate OpenAPI spec
 swagger_autogen(
