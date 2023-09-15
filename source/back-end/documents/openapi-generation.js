@@ -92,7 +92,7 @@ const general_specs = {
             description : "Local Server",
         },
         {
-            url: "https://{app-name}.{cloud-region}.codeengine.appdomain.cloud",
+            url: "https://{app-name}.{cloud-region}.codeengine.appdomain.cloud",//obtener cuando haga el code engine
             description: "IBM Code Engine Deployment",
         },
     ],
